@@ -6,6 +6,7 @@
     --black: #0b0b0b;
     --white: #ffffff;
     --spacing: 18px;
+    --font-sizing: 1.15rem;
 }
 
 * {
@@ -14,7 +15,7 @@
     /* border: 1px solid black; */
     font-family: 'Roboto', sans-serif;
     color: var(--black);
-    font-size: 1.15rem;
+    font-size: var(--font-sizing);
 }
 
 .main {
@@ -87,13 +88,45 @@ input {
     background-color: var(--secondary-color);
     width: 500px;
     border-radius: 28px;
-    padding: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 6px 12px;
 }
 
 .profile {
-    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing);
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+}
+
+.profile-left .greeting {
+    display: flex;
+    flex-direction: column;
+}
+
+.hi {
+    font-size: calc(var(--font-sizing) / 1.5);
+}
+
+.username {
+    font-weight: bold;
+}
+
+.profile-right {
+    display: flex;
+    gap: var(--spacing);
+}
+
+.profile-right button {
+    background-color: var(--primary-color);
+    border-radius: 28px;
+    padding: 6px 12px;
+    color: var(--white);
 }
 
 .bottom {
