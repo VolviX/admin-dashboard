@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --primary-color: #1a92d3;
+    --secondary-color: #e2e8f0;
+    --black: #0b0b0b;
+    --white: #ffffff;
+    --spacing: 18px;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     /* border: 1px solid black; */
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: var(--black);
     font-size: 1.15rem;
 }
 
@@ -18,25 +26,31 @@
 .left {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    background-color: #1a92d3;
+    gap: calc(var(--spacing) * 2);
+    background-color: var(--primary-color);
+}
+
+.left a {
+    color: var(--white);
 }
 
 li {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding-left: 15px;
-    padding-top: 15px;
+    gap: var(--spacing);
+    padding-left: var(--spacing);
+    padding-top: var(--spacing);
 }
 
-svg {
-    fill: white;
-    /* stroke: white; */
-  }
-  
+.left svg {
+    fill: var(--white);
+}
 
+.right svg {
+    fill: var(--black);
+}
+  
 a {
     text-decoration: none;
 }
@@ -48,4 +62,40 @@ a:visited {
 .right {
     display: grid;
     grid-template-rows: 1fr 5fr;
+}
+
+.top {
+    display: grid;
+    grid-template-rows: 1 fr 1fr;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing);
+    gap: var(--spacing);
+}
+
+.search-left, .search-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+}
+
+input {
+    background-color: var(--secondary-color);
+    width: 500px;
+    border-radius: 28px;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.profile {
+    background-color: orange;
+}
+
+.bottom {
+    background-color: var(--secondary-color);
 }
